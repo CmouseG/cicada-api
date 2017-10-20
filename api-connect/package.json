@@ -1,0 +1,21 @@
+{
+  "name": "api-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "error": "^7.0.2",
+    "routes-router": "^4.3.0",
+    "send-data": "^8.0.0"
+  },
+  "devDependencies": {
+    "hammock": "^2.0.1",
+    "node-mocks-http": "^1.6.6",
+    "tape": "^4.8.0"
+  }
+}
