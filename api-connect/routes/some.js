@@ -3,7 +3,7 @@ const sendJson = require('send-data/json')
 exports.index = function (req, res, opts) {
     sendJson(req, res, {
         flag: '1',
-        msg: '/api',
+        msg: req.url,
         data: {
             a: 1,
             b: '2',

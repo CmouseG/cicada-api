@@ -10,30 +10,31 @@ tape('error hammock', function (assert) {
     // router.addRoute("/api/error", function (req, res, opts, cb) {
     //     cb(new Error("some error"))
     // })
-    router.addRoute("/api/error", routes.error.index)
+    router.addRoute("/some/index.do", routes.some.index)
 
     router(
         mockRequest({
-            url: '/api/error',
-            headers: { host: 'localhost', bar: 'baz' },
-            method: 'GET'
+            url: '/some/index.do',
+            // headers: { host: 'localhost', bar: 'baz' },
+            method: 'POST'
         }),
         mockResponse(function (err, res) {
             assert.ifError(err)
 
-            assert.equal(res.statusCode, 502)
+            assert.equal(res.statusCode, 200)
             const body = JSON.parse(res.body)
 
             assert.deepEqual(body, {
-                errors: [
-                    {
-                        type: 'error',
-                        statusCode: 502,
-                        message: '系统繁忙，请稍后再试！',
-                        _name: 'ErrorError',
-                        attribute: 'general'
-                    }
-                ]
+                flag: '1',
+                msg: '/some/index.do',
+                data: {
+                    a: 1,
+                    b: '2',
+                    c: [1, 'gg', null, null],
+                    d: { some: '' },
+                    e: '',
+                    f: null
+                }
             })
 
             assert.end()

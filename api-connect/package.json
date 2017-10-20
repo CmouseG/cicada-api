@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "hammock": "^2.0.1",
-    "node-mocks-http": "^1.6.6",
     "tape": "^4.8.0"
   }
 }

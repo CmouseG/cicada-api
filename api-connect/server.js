@@ -28,9 +28,7 @@ const app = routesRouter({
     }
 })
 
-app.addRoute('/api/error', routes.error.index)
-app.addRoute('/api', routes.api.index)
-app.addRoute('/api/path2', routes.path2.index)
+app.addRoute('/some/index.do', routes.some.index)
 
 http.createServer(app).listen(4000)
 console.log('Web sevice server listening on port 4000')
