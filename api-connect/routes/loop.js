@@ -1,7 +1,8 @@
-const sendJson = require('send-data/json')
+import sendJson from 'send-data/json'
+
 let count = 0
 
-module.exports = function (req, res) {
+export default function (req, res) {
     count++
     if (count === 5) {
         sendJson(req, res, {

@@ -1,8 +1,8 @@
-const sendJson = require('send-data/json')
+import sendJson from 'send-data/json'
 
-exports.index = function (req, res, opts) {
+export default function (req, res, opts) {
     sendJson(req, res, {
-        flag: '66688',
+        flag: '1',
         msg: req.url,
         data: {
             a: 1,

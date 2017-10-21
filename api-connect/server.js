@@ -1,9 +1,9 @@
-const http = require('http')
-const url = require('url')
-const routesRouter = require('routes-router')
-const sendJson = require('send-data/json')
+import http from 'http'
+import url from 'url'
+import routesRouter from 'routes-router'
+import sendJson from 'send-data/json'
 
-const routes = require('./routes')
+import * as routes from './routes'
 
 const app = routesRouter({
     notFound: function (req, res) {
@@ -28,7 +28,7 @@ const app = routesRouter({
     }
 })
 
-app.addRoute('/some/index.do', routes.some.index)
+app.addRoute('/some/index.do', routes.some)
 app.addRoute('/timeout/index.do', routes.timeout)
 app.addRoute('/loop/index.do', routes.loop)
 

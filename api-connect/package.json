@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./test/test.js",
-    "serve": "supervisor server.js"
+    "serve": "supervisor --exec babel-node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,8 @@
     "send-data": "^8.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "hammock": "^2.0.1",
     "supervisor": "^0.12.0",
     "tape": "^4.8.0"

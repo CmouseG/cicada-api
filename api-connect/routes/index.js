@@ -1,3 +1,9 @@
-exports.some = require('./some')
-exports.timeout = require('./timeout')
-exports.loop = require('./loop')
+import some from './some'
+import timeout from './timeout'
+import loop from './loop'
+
+export {
+    some,
+    timeout,
+    loop
+}
