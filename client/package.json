@@ -13,5 +13,6 @@
     "http-proxy-middleware": "^0.17.4",
     "opn": "^5.1.0",
     "serve-static": "^1.13.1"
-  }
+  },
+  "devDependencies": {}
 }
