@@ -29,6 +29,8 @@ const app = routesRouter({
 })
 
 app.addRoute('/some/index.do', routes.some.index)
+app.addRoute('/timeout/index.do', routes.timeout)
+app.addRoute('/loop/index.do', routes.loop)
 
 http.createServer(app).listen(4000)
 console.log('Web sevice server listening on port 4000')
