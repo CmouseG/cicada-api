@@ -59,24 +59,3 @@ app.use(function (req, res, next) {
 app.listen(3000)
 console.log('Server starting: http://127.0.0.1:3000')
 opn('http://127.0.0.1:3000')
-
-// function ajax (option) {
-// 	var xmlHttp = new XMLHttpRequest();
-// 	xmlHttp.onreadystatechange = function () {
-// 		if (xmlHttp.readyState === 4) {
-// 			if (xmlHttp.status === 200) {
-// 				option.success(xmlHttp.responseText)
-// 			}
-// 		}
-// 	}
-// 	xmlHttp.open(option.type, option.url, true)
-// 	xmlHttp.send(option.data)
-// }
-// ajax({
-//     type: 'POST',
-//     url: '/some/index.do',
-//     data: {},
-//     success: function(res) {
-//         console.log(res)
-//     }
-// })

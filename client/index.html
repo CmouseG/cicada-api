@@ -8,5 +8,45 @@
 </head>
 <body>
     <h1>Client starting and proxy...</h1>
+
+    <!-- <script src="http://mockjs.com/dist/mock.js"></script>
+    <script>
+        // Mock.mock('/some/index.do', {
+        //     'age|1-100': 100
+        // })
+        Mock.mock(/\.do/, function (req) {
+            console.log(req)
+            return Mock.mock({
+                "user|1-3": [{
+                    'name': '@cname'
+                }
+            ]
+            })
+        })
+    </script> -->
+    <script>
+        function ajax (option) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState === 4) {
+                    if (xmlHttp.status === 200) {
+                        option.success(xmlHttp.responseText)
+                    }
+                }
+            }
+            xmlHttp.open(option.type, option.url, true)
+            xmlHttp.send(option.data)
+        }
+        ajax({
+            type: 'POST',
+            url: '/some/index.do?user=11',
+            data: {
+                param: 33
+            },
+            success: function(res) {
+                document.write(res)
+            }
+        })
+    </script>
 </body>
 </html>

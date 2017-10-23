@@ -18,6 +18,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "hammock": "^2.0.1",
+    "mockjs": "^1.0.1-beta3",
     "supervisor": "^0.12.0",
     "tape": "^4.8.0"
   }
